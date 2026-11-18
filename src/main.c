@@ -1,13 +1,17 @@
 #include "sd_card.h"
 #include "mp3_player.h"
-
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "oled_display.h"
 
 const char *TAG = "Main";
 
 void app_main() {
+
+    ESP_ERROR_CHECK(oled_display_init());
+    ESP_ERROR_CHECK(oled_display_show_test_pattern());
+
     esp_err_t err = sd_card_init();
     if(err != ESP_OK)
     {
