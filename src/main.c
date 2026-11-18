@@ -18,7 +18,7 @@ void app_main() {
     sd_card_test_file();
 
     ESP_ERROR_CHECK(mp3_player_init(GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_26));  // BCLK, WS, DOUT
-    mp3_player_set_volume(100);
+    mp3_player_set_volume(20);
 
     mp3_player_start("/sdcard/Music/As the World Caves In.mp3");
     while(mp3_player_is_playing()) vTaskDelay(pdMS_TO_TICKS(100));
