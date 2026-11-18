@@ -11,6 +11,7 @@ idf_component_register(
     esp_driver_i2s
     esp_driver_i2c
     esp_lcd
+    lvgl__lvgl
     esp_timer
     sdmmc
 )
